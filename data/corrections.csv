@@ -1,0 +1,14 @@
+entity,ticker,report_date,column,value,source
+company,DRC,2026-09-30,st_investments,0,"Q3/2026 statement: code 120 is '-'; cash + receivables + inventory + other current assets equals current assets"
+company,CLC,2026-09-30,st_investments,0,"Q3/2026 balance sheet: cash + receivables + inventory + other current assets equals current assets"
+company,TD6,2026-09-30,st_investments,0,"Q3/2026 balance sheet: cash + receivables + inventory + other current assets equals current assets"
+company,TVD,2026-09-30,st_investments,0,"Q3/2026 balance sheet: cash + receivables + inventory + other current assets equals current assets"
+bank,TCB,2026-03-31,npl_ratio,1.091219,"Stray digit in the group-5 NPL note; the source read 6.71"
+bank,TCB,2026-03-31,llcr,129.393204,"Derived from the same group-5 fault"
+company,NHH,2024-09-30,net_revenue,550711872694.0,BSC holds the nine-month figure as the quarter; quarter = 9M (CIS_10) minus the half-year filing
+company,NHH,2024-09-30,gross_profit,107114545905.0,BSC holds the nine-month figure as the quarter; quarter = 9M (CIS_20) minus the half-year filing
+company,NHH,2024-09-30,finance_cost,-6677099279.0,BSC holds the nine-month figure as the quarter; quarter = 9M (CIS_22) minus the half-year filing
+company,NHH,2024-09-30,selling_expense,-38534331184.0,BSC holds the nine-month figure as the quarter; quarter = 9M (CIS_25) minus the half-year filing
+company,NHH,2024-09-30,admin_expense,-21612462332.0,BSC holds the nine-month figure as the quarter; quarter = 9M (CIS_26) minus the half-year filing
+company,NHH,2024-09-30,npatmi,5566751570.0,BSC holds the nine-month figure as the quarter; quarter = 9M (CIS_61) minus the half-year filing
+company,VPS,2025-03-31,gross_profit,-17068761306.0,"BSC holds 1,468 bn gross profit on 5 bn revenue; figure from the published Q1/2025 income statement"

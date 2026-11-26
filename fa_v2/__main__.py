@@ -1,4 +1,4 @@
-"""python -m fa_v2 --data <folder> [--quarter 2026-09-30] [--out output] [--backtest]"""
+"""python -m fa_v2 --data <folder> [--bsc <BSC csv folder>] [--quarter 2026-09-30] [--out output] [--backtest]"""
 from __future__ import annotations
 
 import argparse
@@ -7,17 +7,22 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import backtest, data, rate_all, report
+from . import backtest, bsc, data, rate_all, report
 
 
 def main() -> None:
+    import logging
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
     ap = argparse.ArgumentParser(description="FA_V2 margin grades")
     ap.add_argument("--data", type=Path, required=True, help="folder with the input files (docs/06-du-lieu-dau-vao.md)")
+    ap.add_argument("--bsc", type=Path, help="folder with the 20 BSC export CSVs; rebuilds the three *_quarterly files in --data first")
     ap.add_argument("--out", type=Path, default=Path("output"))
     ap.add_argument("--quarter", help="quarter end for the final list, e.g. 2026-09-30 (default: latest)")
     ap.add_argument("--backtest", action="store_true", help="also check grades against prices (needs prices file)")
     a = ap.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
+    if a.bsc:
+        bsc.write_inputs(a.bsc, a.data)
     g = rate_all(a.data)
     g.to_csv(a.out / "grades_history.csv", index=False)
     q = pd.Timestamp(a.quarter) if a.quarter else g.report_date.max()

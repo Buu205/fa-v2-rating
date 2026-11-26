@@ -1,7 +1,0 @@
-entity,ticker,report_date,column,value,source
-company,DRC,2026-09-30,st_investments,0,"Q3/2026 statement: code 120 is '-'; cash + receivables + inventory + other current assets equals current assets"
-company,CLC,2026-09-30,st_investments,0,"Q3/2026 balance sheet: cash + receivables + inventory + other current assets equals current assets"
-company,TD6,2026-09-30,st_investments,0,"Q3/2026 balance sheet: cash + receivables + inventory + other current assets equals current assets"
-company,TVD,2026-09-30,st_investments,0,"Q3/2026 balance sheet: cash + receivables + inventory + other current assets equals current assets"
-bank,TCB,2026-03-31,npl_ratio,1.091219,"Stray digit in the group-5 NPL note; the source read 6.71"
-bank,TCB,2026-03-31,llcr,129.393204,"Derived from the same group-5 fault"

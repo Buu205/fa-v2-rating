@@ -3,8 +3,10 @@ __pycache__/
 .pytest_cache/
 .venv/
 .DS_Store
-# input data and outputs stay outside the repo
-data/
+# reference CSVs in data/ are committed; tables rebuilt from the BSC export are not
+data/*_quarterly.*
+!data/market_cap_quarterly.csv
+!data/liquidity_quarterly.csv
 output/
 *.xlsx
 *.parquet
