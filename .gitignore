@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.DS_Store
+# input data and outputs stay outside the repo
+data/
+output/
+*.xlsx
+*.parquet
